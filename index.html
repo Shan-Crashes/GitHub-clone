@@ -1,42 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sleek Gold And Black Login Page By Danish Coder</title>
-    <link rel="stylesheet" href="index.css">
+    <title>GitHub Login Clone</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f6f8fa;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            width: 340px;
+            text-align: center;
+        }
+        .container h2 {
+            margin-bottom: 20px;
+        }
+        .form-group {
+            text-align: left;
+            margin-bottom: 15px;
+        }
+        .form-group label {
+            display: block;
+            font-weight: bold;
+        }
+        .form-group input {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+        .btn {
+            width: 100%;
+            padding: 8px;
+            background-color: #2ea44f;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        .btn:hover {
+            background-color: #22863a;
+        }
+        .link {
+            display: block;
+            margin-top: 10px;
+            font-size: 14px;
+            color: #0366d6;
+            text-decoration: none;
+        }
+        .link:hover {
+            text-decoration: underline;
+        }
+    </style>
 </head>
-
 <body>
-    <div class="bubble"></div>
-    <div class="wraper">
+    <div class="container">
+        <h2>Sign in to GitHub</h2>
         <form>
-            <h2>Login</h2>
-            <div class="input-box">
-                <input type="email" required>
-                <label>Email</lable>
+            <div class="form-group">
+                <label for="username">Username or email address</label>
+                <input type="text" id="username" name="username" required>
             </div>
-
-            <div class="input-box">
-                <input type="password" required>
-                <label>Password</lable>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required>
             </div>
-            <div class="remember-forgot">
-                <label><input type="checkbox">
-                    Remember me </label>
-                <a href="#">forgot password?</a>
-            </div>
-            <button>Login</button>
-            <div class="register-link">
-                <p>Don't have an account?
-                    <a href="#">register</a>
-                </p>
-            </div>
+            <button type="submit" class="btn">Sign in</button>
         </form>
+        <a href="#" class="link">Forgot password?</a>
+        <a href="#" class="link">Create an account</a>
     </div>
-    <script src="index.js"></script>
 </body>
-
 </html>
+
+        
 <!-- Subscribe to @Danish Coder for more of such interesting designs and CSS animations  -->
