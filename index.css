@@ -1,69 +1,131 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
 body {
-    font-family: Arial, sans-serif;
-    background-color: #FFFFFF;
+    background-color: #000 !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+/* Wrapper */
+.wraper {
+    z-index: 1;
+    position: relative;
+    width: 400px;
+    height: 500px;
+    background: rgba(0, 0, 0, 0.8);
+    box-shadow: 0 18px 32px rgba(255, 215, 0, 0.5);
+    border: 2px solid #FFD700;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Title */
+h2 {
+    text-align: center;
+    font-size: 2em;
+    color: #FFD700;
+    font-family: "Lobster", cursive;
+}
+
+/* GitHub Logo */
+.github-logo {
     display: flex;
     justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
-}
-
-.container {
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-    width: 340px;
-    text-align: center;
-}
-
-.container h2 {
     margin-bottom: 20px;
 }
 
-.form-group {
-    text-align: left;
-    margin-bottom: 15px;
+.github-logo img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
 }
 
-.form-group label {
-    display: block;
-    font-weight: bold;
+/* Input Box */
+.input-box {
+    position: relative;
+    width: 80%;
+    margin: 20px 0;
+    border-bottom: 2px solid #FFD700;
 }
 
-.form-group input {
+.input-box label {
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    font-size: 1em;
+    color: #FFD700;
+    transition: 0.5s;
+    pointer-events: none;
+}
+
+.input-box input:focus ~ label,
+.input-box input:valid ~ label {
+    top: 6px;
+    color: #FFC700;
+    font-size: 0.8em;
+}
+
+.input-box input {
     width: 100%;
-    padding: 8px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 14px;
-}
-
-.btn {
-    width: 100%;
-    padding: 8px;
-    background-color: #2ea44f;
-    color: #fff;
+    height: 40px;
+    background: transparent;
     border: none;
-    border-radius: 5px;
-    font-size: 16px;
-    cursor: pointer;
+    outline: none;
+    color: #FFD700;
+    font-size: 1em;
+    padding: 0px 10px;
 }
 
-.btn:hover {
-    background-color: #22863a;
+/* Remember and Forgot */
+.remember-forgot {
+    margin: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
 }
 
-.link {
-    display: block;
-    margin-top: 10px;
-    font-size: 14px;
-    color: #0366d6;
+.remember-forgot a {
+    color: #FFD700;
     text-decoration: none;
+    font-size: 13px;
 }
 
-.link:hover {
-    text-decoration: underline;
+button {
+    margin: 20px 0;
+    width: 80%;
+    height: 40px;
+    border: none;
+    color: #FFF;
+    background: #FFD700;
+    border-radius: 20px;
+    font-size: 1em;
+    font-weight: 500;
+    cursor: pointer;
+    transition: 0.5s;
 }
 
-  /* Subscribe to @Danish Coder for more of such interesting designs and CSS animations  */
+button:hover {
+    transform: scale(0.9);
+    background: #FFC700;
+}
+
+.register-link {
+    font-size: 13px;
+    text-align: center;
+}
+
+.register-link a {
+    color: #FFD700;
+}
